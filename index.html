@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.3/dist/tailwind.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/simarmehta">
+    <title>Pranshu Goyal</title>
+    <style>
+        .markdown-container img {
+            display: block;
+            margin: 0 auto;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+        }
+
+        .markdown-container h2 {
+            font-weight: bold;
+        }
+
+        .markdown-container ul {
+            list-style-type: disc;
+            padding-left: 1.25rem;
+        }
+
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .education-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .education-item {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .education-container img {
+            height: 100px; /* Adjust this value to the desired height */
+            width: auto;   /* Maintain aspect ratio */
+            max-width: 100%; /* Prevent the image from exceeding its container's width */
+            margin: 0 auto 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+    }
+
+        .contact-container {
+            margin-top: 2rem;
+        }
+
+        .contact-container p {
+            margin: 0.5rem 0;
+        }
+
+        .section-container {
+            margin-bottom: 3.5rem;
+            /* Adjust this value as needed for the desired spacing */
+        }
+
+        .nav-item {
+            margin: 0 15px; /* Add more space between navigation items */
+        }
+
+        .title-container {
+            height: 3.5rem; /* Adjust this height based on the tallest title */
+            display: flex;
+            align-items: center;
+        }
+
+  /* Consistent image size and alignment */
+        .project-image {
+            width: 300px;
+            height: 200px;
+            object-fit: contain;
+            margin-top: 10px; /* Space between the title and the image */
+        }
+    </style>
+</head>
+
+<body class="dark-mode relative" style="padding: 1rem;">
+    <style>
+        /* Add necessary dark mode styles for the footer */
+        .dark-mode .bg-white.p-4.rounded.shadow-md.transition-colors.duration-200.hover\:bg-gray-100:hover {
+            background-color: #333333;
+        }
+
+        .dark-mode {
+            background-color: #1a1a1a;
+        }
+
+        .dark-mode footer,
+        .dark-mode footer .text-gray-600 {
+            color: #f8f8f8;
+        }
+
+        .dark-mode .text-white,
+        .dark-mode .text-black,
+        .dark-mode .text-gray-900,
+        .dark-mode h1,
+        .dark-mode h2,
+        .dark-mode h3,
+        .dark-mode p,
+        .dark-mode h4,
+        .dark-mode .bg-white .card-content,
+        .dark-mode .bg-white div {
+            color: #f8f8f8;
+        }
+
+        .dark-mode .bg-white {
+            background-color: #1a1a1a;
+        }
+
+        .dark-mode .shadow-md {
+            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1), 0 1px 3px rgba(255, 255, 255, 0.06);
+        }
+    </style>
+    <div id="particles-js"></div>
+    <nav class="p-4 flex flex-wrap items-center justify-between w-full px-2 md:px-4">
+        <div>
+            <span class="text-black font-bold"><a href="Files/Simardeep Singh_Mehta_resume.pdf">Resume</a></span><span
+                class="text-black"></span>
+        </div>
+        <!-- <div>
+            <span class="text-black font-bold"><a href="https://pranshu267.github.io/">Pranshu Goyal</a></span><span
+                class="text-black"></span>
+        </div> -->
+        <div class="flex-grow text-center">
+            <span class="nav-item text-black font-bold"><a href="#about-me-container">About</a></span>
+            <span class="nav-item text-black font-bold"><a href="#experience-container">Experience</a></span>
+            <span class="nav-item text-black font-bold"><a href="#projects-container">Projects</a></span>
+            <span class="nav-item text-black font-bold"><a href="#publications-container">Publications</a></span>
+            <span class="nav-item text-black font-bold"><a href="#education-container">Education</a></span>
+        </div>
+        <button id="dark-mode-toggle" class="ml-4 p-2  text-black rounded shadow-md">☀️</button>
+    </nav>
+    <div class="flex flex-col items-center justify-center min-h-screen">
+        <div id="header-container" class="px-4 py-5 mt-8 space-x-4">
+            <h1 class="text-8xl font-bold mb-10">Simardeep Singh Mehta</h1>
+            <h2 class="text-xl mb-3">Machine Learning God
+                <br><b>Bugs,F1,Coffee</b></h2>
+            <br>
+            <div class="flex space-x-4">
+                <a href="https://www.linkedin.com/in/simarnyu/" target="_blank"
+                    class="text-xl text-black hover:text-pink-600 transition-colors duration-200 ease-in-out"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/simarmehta" target="_blank"
+                    class="text-xl text-black hover:text-pink-600 transition-colors duration-200 ease-in-out"><i
+                        class="fab fa-github"></i></a>
+                <a href="mailto:mehtasimardeepsingh@gmail.com" target="_blank"
+                    class="text-xl text-black hover:text-pink-600 transition-colors duration-200 ease-in-out"><i
+                        class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+    <div id="content-container" class="flex flex-col md:flex-row w-full flex-wrap mt-6 mb-20 mx-1 md:mx-0">
+
+        <!-- About Me Section -->
+        <div id="about-me-container" class="section-container w-full md:w-3/3 px-4 py-5 mb-5 md:mb-0">
+            <h1 class="text-2xl font-semibold mb-4"><i class="fa-solid fa-user"></i> About Me</h1>
+            <h3 class="text-sm italic mb-4">Hey there, Welcome to my corner of the internet!</h3>
+            <div class="about-me-content flex flex-col md:flex-row items-center">
+                <!-- Your Picture -->
+                <div class="about-me-picture md:w-1/3 w-full flex justify-center mb-4 md:mb-0">
+                    <img src="assets/profile.png" alt="Your Name" class="square-photo shadow-md"
+                        style="width: 300px; height: 400px;">
+                </div>
+                <!-- About Me Text and Badges -->
+                <div class="about-me-text md:w-2/3 w-full text-center md:text-left">
+                    <p class="mb-4">
+                        I'm Simardeep Singh Mehta , a Master's student in Computer Science at New York University, specializing in Machine Learning. 
+                        As a Computer Science graduate student at New York University I am passionate about MLOps, cloud computing, and scalable software architectures. 
+                        My academic journey is complemented by impactful internships at the American Institute for Research, Ernst & Young, and OnePercent Software LLC, 
+                        where I have consistently delivered innovative solutions. At AIR, I led the development of an advanced MLOps pipeline integrating open-source LLMs with Azure OpenAI,
+                        boosting document retrieval efficiency by 25%. I am proficient in Kubernetes, Docker, and CI/CD workflows, ensuring the deployment of robust, production-ready systems.
+                        During my time at EY, I optimized big data pipelines using AWS and Apache Spark, enhancing processing efficiency by 40%. I am passionate about leveraging my skills to 
+                        solve complex problems and make a meaningful impact in the tech world.
+                    </p>
+                    <p>
+                        I'm particularly passionate about AI and actively exploring the latest technologies, including
+                        generative AI with a focus on Large Language Models (LLMs) and Multi-Modal machine learning,
+                        through various projects.
+                        These endeavors are helping me push the boundaries of innovation in Machine Learning and stay at
+                        the forefront of this rapidly evolving field.
+                    </p>
+                    <h2 class="text-xl mt-4 mb-4">TECHNICAL SKILLS</h2>
+                    <!-- Badges Section -->
+                    <div class="badges mt-4">
+                        <p class="flex flex-wrap justify-center">
+                            <!-- Machine Learning and AI Badges -->
+                            <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white"
+                                alt="PyTorch" class="badge" />
+                            <img src="https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white"
+                                alt="TensorFlow" class="badge" />
+                            <img src="https://img.shields.io/badge/LangChain-%2300A1E4.svg?style=for-the-badge&logo=LangChain&logoColor=white"
+                                alt="LangChain" class="badge" />
+                            <img src="https://img.shields.io/badge/HuggingFace-%23FFD700.svg?style=for-the-badge&logo=HuggingFace&logoColor=white"
+                                alt="Hugging Face" class="badge" />
+                            <img src="https://img.shields.io/badge/Optuna-%23E74C3C.svg?style=for-the-badge&logo=Optuna&logoColor=white"
+                                alt="Optuna" class="badge" />
+                            <img src="https://img.shields.io/badge/Pandas-%23150458.svg?style=for-the-badge&logo=Pandas&logoColor=white"
+                                alt="Pandas" class="badge" />
+                            <img src="https://img.shields.io/badge/Scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white"
+                                alt="Scikit-learn" class="badge" />
+                            <img src="https://img.shields.io/badge/NLTK-%231D4159.svg?style=for-the-badge&logo=NLTK&logoColor=white"
+                                alt="NLTK" class="badge" />
+                            <img src="https://img.shields.io/badge/CUDA-%230076BA.svg?style=for-the-badge&logo=CUDA&logoColor=white"
+                                alt="CUDA" class="badge" />
+                            <img src="https://img.shields.io/badge/OpenAI-%234EA94B.svg?style=for-the-badge&logo=OpenAI&logoColor=white"
+                                alt="OpenAI" class="badge" />
+
+                            <img src="https://img.shields.io/badge/Apache%20Spark-%23E25A1C.svg?style=for-the-badge&logo=apachespark&logoColor=white"
+                                alt="Apache Spark" class="badge" />
+                            <img src="https://img.shields.io/badge/Vector%20Database-%2300A3E0.svg?style=for-the-badge&logo=VectorDatabase&logoColor=white"
+                                alt="Vector Database" class="badge" />
+                            <img src="https://img.shields.io/badge/Grafana-%23F46800.svg?style=for-the-badge&logo=Grafana&logoColor=white"
+                                alt="Grafana" class="badge" />
+                            <img src="https://img.shields.io/badge/MongoDB-%2347A248.svg?style=for-the-badge&logo=MongoDB&logoColor=white"
+                                alt="MongoDB" class="badge" />
+                            <img src="https://img.shields.io/badge/Apache%20Kafka-%2302313D.svg?style=for-the-badge&logo=apachekafka&logoColor=white"
+                                alt="Apache Kafka" class="badge" />
+                            <img src="https://img.shields.io/badge/Power%20BI-%23F2C811.svg?style=for-the-badge&logo=powerbi&logoColor=black"
+                                alt="Power BI" class="badge" />
+                            <img src="https://img.shields.io/badge/Hadoop-%2341A41D.svg?style=for-the-badge&logo=ApacheHadoop&logoColor=white"
+                                alt="Hadoop" class="badge" />
+                            <img src="https://img.shields.io/badge/Dask-%23FF6C37.svg?style=for-the-badge&logo=Dask&logoColor=white"
+                                alt="Dask" class="badge" />
+                            <img src="https://img.shields.io/badge/Tableau-%23E97627.svg?style=for-the-badge&logo=Tableau&logoColor=white"
+                                alt="Tableau" class="badge" />
+                            <img src="https://img.shields.io/badge/Apache%20Airflow-%23017CEE.svg?style=for-the-badge&logo=apacheairflow&logoColor=white"
+                                alt="Apache Airflow" class="badge" />
+
+                            <img src="https://img.shields.io/badge/C-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white"
+                                alt="C" class="badge" />
+                            <img src="https://img.shields.io/badge/C++-%2300599C.svg?style=for-the-badge&logo=cpp&logoColor=white"
+                                alt="C++" class="badge" />
+                            <img src="https://img.shields.io/badge/Java-%23007396.svg?style=for-the-badge&logo=Java&logoColor=white"
+                                alt="Java" class="badge" />
+                            <img src="https://img.shields.io/badge/Python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white"
+                                alt="Python" class="badge" />
+                            <img src="https://img.shields.io/badge/R-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white"
+                                alt="R" class="badge" />
+                            <img src="https://img.shields.io/badge/SQL-%234477BB.svg?style=for-the-badge&logo=postgresql&logoColor=white"
+                                alt="SQL" class="badge" />
+                            <img src="https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"
+                                alt="HTML5" class="badge" />
+                            <img src="https://img.shields.io/badge/Angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white"
+                                alt="Angular" class="badge" />
+                            <img src="https://img.shields.io/badge/Flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white"
+                                alt="Flask" class="badge" />
+                            <img src="https://img.shields.io/badge/Streamlit-%23FF4B4B.svg?style=for-the-badge&logo=streamlit&logoColor=white"
+                                alt="Streamlit" class="badge" />
+                            <img src="https://img.shields.io/badge/OpenCV-%235C3EE8.svg?style=for-the-badge&logo=opencv&logoColor=white"
+                                alt="OpenCV" class="badge" />
+
+                            <img src="https://img.shields.io/badge/AWS-%23232F3E.svg?style=for-the-badge&logo=amazonaws&logoColor=white"
+                                alt="AWS" class="badge" />
+                            <img src="https://img.shields.io/badge/SageMaker-%2315C0D7.svg?style=for-the-badge&logo=sagemaker&logoColor=white"
+                                alt="SageMaker" class="badge" />
+                            <img src="https://img.shields.io/badge/Docker-%232496ED.svg?style=for-the-badge&logo=docker&logoColor=white"
+                                alt="Docker" class="badge" />
+                            <img src="https://img.shields.io/badge/Kubernetes-%23326CE5.svg?style=for-the-badge&logo=kubernetes&logoColor=white"
+                                alt="Kubernetes" class="badge" />
+                            <img src="https://img.shields.io/badge/Jenkins-%23D33833.svg?style=for-the-badge&logo=jenkins&logoColor=white"
+                                alt="Jenkins" class="badge" />
+                            <img src="https://img.shields.io/badge/GitHub%20Actions-%232088FF.svg?style=for-the-badge&logo=githubactions&logoColor=white"
+                                alt="GitHub Actions" class="badge" />
+                            <img src="https://img.shields.io/badge/EC2-%23232F3E.svg?style=for-the-badge&logo=amazonec2&logoColor=white"
+                                alt="EC2" class="badge" />
+                            <img src="https://img.shields.io/badge/GCP-%234285F4.svg?style=for-the-badge&logo=googlecloud&logoColor=white"
+                                alt="GCP" class="badge" />
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="experience-container" class="section-container w-full md:w-3/3 px-4 py-5 mb-5 md:mb-0">
+            <h1 class="text-2xl font-semibold mb-4"><i class="fa-solid fa-briefcase"></i> Experience</h3>
+                <h3 class="text-sm italic mb-4">Take a look at what I have done in the past</h4>
+                <div id="experience-list" class="gap-4 flex-wrap">
+                    <!-- Fetched Experience Markdown files will be displayed here -->
+                </div>
+        </div>
+        <br>
+        <br>
+        <div id="projects-container" class="section-container w-full md:w-3/3 px-4 py-5 mb-5 md:mb-0">
+            <h1 class="text-2xl font-semibold mb-4"><i class="fa-solid fa-code"></i> Projects</h3>
+                <h3 class="text-sm italic mb-4">Discover what I do in my spare time</h4>
+                <div id="projects-list" class="grid grid-cols-1 md:grid-cols-3 gap-4 flex-wrap">
+                    <!-- Fetched Projects Markdown files will be displayed here -->
+                </div>
+        </div>
+
+
+        <div id="publications-container" class="section-container w-full md:w-3/3 px-4 py-5 mb-5 md:mb-0">
+            <h1 class="text-2xl font-semibold mb-4"><i class="fa-solid fa-book"></i> Publications</h1>
+            <h3 class="text-sm italic mb-4">Explore my research contributions</h3>
+            <div class="publications-content">
+                <!-- Publication 1 -->
+                <div class="publication-item mb-6">
+                    <h2 class="text-xl font-semibold">Multilevel Deep Learning Model for Fabric Classification and Defect Detection</h2>
+                    <p class="text-md mt-2 mb-2">
+                        Detecting defects in fabrics is challenging due to the numerous variations in fabric types and defects. 
+                        Traditional methods have struggled with low detection rates and accuracy. 
+                        To address this, we implemented multilevel modeling for enhanced performance. 
+                        Our approach compares advanced deep learning models—MobileNetV2, Xception, VGG19, and InceptionV3—evaluating their performance across different fabric types. 
+                        Initially, a Convolutional Neural Network (CNN) classifies the fabric with 97.6% accuracy, followed by defect detection using the optimal model for each fabric type. 
+                        This method significantly improves overall defect detection performance. 
+                        Additionally, K-fold cross-validation ensures the robustness of the proposed model.'
+                    </p>
+                    <p class="text-md mt-2 mb-2">
+                        date: 2023-06-22
+                    </p>
+                    <p class="text-md mt-2 mb-2">
+                        venue: 'Advances in Data-driven Computing and Intelligent Systems, Springer'
+                    </p>
+                    <a href="https://link.springer.com/chapter/10.1007/978-981-99-0981-0_57" target="_blank" class="text-blue-600 hover:text-blue-800 transition-colors duration-200 ease-in-out">
+                        Read the full publication
+                    </a>
+                </div>
+                <!-- Publication 2 -->
+                <div class="publication-item mb-6">
+                    <h2 class="text-xl font-semibold">Ensemble Model for Music Genre Classification</h2>
+                    <p class="text-md mt-2 mb-2">
+                        Music Information Retrieval (MIR) has long been a focus of research, aiming to categorize music into genres based on features like instruments, rhythm, and tempo. Despite significant progress in music genre classification, challenges remain. This work analyzes how the number of genres impacts the accuracy of different machine learning models. 
+                        We introduce a novel approach using an ensemble model that achieves 90.3% accuracy in identifying the genre of a given audio clip, demonstrating substantial advancements in the field.
+                    </p>
+                    <p class="text-md mt-2 mb-2">
+                        date: 2023-06-01
+                    </p>
+                    <p class="text-md mt-2 mb-2">
+                        venue: 'Innovations in Data Analytics, Springer'
+                    </p>                   
+                    <a href="https://link.springer.com/chapter/10.1007/978-981-99-0550-8_32" target="_blank" class="text-blue-600 hover:text-blue-800 transition-colors duration-200 ease-in-out">
+                        Read the full publication
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+
+        <div id="education-container" class="section-container w-full md:w-3/3 px-4 py-5 mb-5 md:mb-0">
+            <h1 class="text-2xl font-semibold mb-4"><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+                <h3 class="text-sm italic mb-4">My academic journey</h4>
+                <div class="education-container">
+                    <div class="education-item">
+                        <img src="assets/NYU-Logo.png" alt="College Logo 1" />
+                        <h3 class="text-xl mt-4 mb-4">Master of Science in Computer Science</h3>
+                        <h4 class="text-sm mb-4">New York University</h4>
+                        <h4 class="text-sm mb-4">2023 - 2025</h4>
+                        <h4 class="text-sm mt-4 mb-4">Courses</h4>
+                        <h4 class="text-sm mb-4">Machine Learning</h4>
+                        <h4 class="text-sm mb-4">Deep Learning</h4>
+                        <h4 class="text-sm mb-4">Natural Language Understanding</h4>
+                        <h4 class="text-sm mb-4">Data Science</h4>
+                        <h4 class="text-sm mb-4">Big Data</h4>
+                        <h4 class="text-sm mb-4">Artificial Intelligence</h4>
+                        <h4 class="text-sm mb-4">Design and Analysis of Algorithms</h4>
+                        <h4 class="text-sm mb-4">Software Engineering</h4>
+                        <h4 class="text-sm mb-4">Programming Languages</h4>
+                    </div>
+                    <div class="education-item">
+                        <img src="assets/TIET-Logo.png" alt="College Logo 2" />
+                        <h3 class="text-xl mt-4 mb-4">Bachelor of Technology in Computer Engineering</h3>
+                        <h4 class="text-sm mb-4">Thapar Institute of Engineering and Technology</h4>
+                        <h4 class="text-sm mb-4">2018 - 2022</h4>
+                        <h4 class="text-sm mt-4 mb-4">Relevant Courses</h4>
+                        <h4 class="text-sm mb-4">Numerical Analysis</h4>
+                        <h4 class="text-sm mb-4">Optimization Techniques</h4>
+                        <h4 class="text-sm mb-4">Predictive Ananlytics using Statistics</h4>
+                        <h4 class="text-sm mb-4">Probability and Statistics</h4>
+                        <h4 class="text-sm mb-4">Discrete Mathematical Structures</h4>
+                        <h4 class="text-sm mb-4">AI Applications - CV, NLP</h4>
+                        <h4 class="text-sm mb-4">Database Management Systems</h4>
+                        <h4 class="text-sm mb-4">Operating Systems</h4>
+                        <h4 class="text-sm mb-4">Object Oriented Programming</h4>
+                    </div>
+                </div>
+        </div>
+
+    </div>
+    <script>
+        // Function to apply dark mode based on the saved state
+        function applyDarkMode() {
+            const isDarkMode = localStorage.getItem('dark-mode') === 'true';
+            if (isDarkMode) {
+                document.body.classList.add('dark-mode');
+                document.getElementById("dark-mode-toggle").innerText = "☀️";
+            } else {
+                document.body.classList.remove('dark-mode');
+                document.getElementById("dark-mode-toggle").innerText = "🌓";
+            }
+        }
+
+        // Apply dark mode on page load
+        applyDarkMode();
+
+        // Add event listener to toggle dark mode and save the state in localStorage
+        document.getElementById("dark-mode-toggle").addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+            const isDarkModeOn = document.body.classList.contains("dark-mode");
+            localStorage.setItem('dark-mode', isDarkModeOn);
+            document.getElementById("dark-mode-toggle").innerText = isDarkModeOn ? "☀️" : "🌓";
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
+    <script>
+        const postsList = document.getElementById('posts-list');
+        const projectsList = document.getElementById('projects-list');
+        const experienceList = document.getElementById('experience-list');
+        const converter = new showdown.Converter({
+            simpleLineBreaks: true,
+            strikethrough: true,
+            tables: true,
+        });
+        const baseUrl = "https://api.github.com/repos/simarmehta/simarmehta.github.io/contents/";
+        const folders = ['posts', 'projects', 'linkedin', 'experience'];
+
+        async function fetchMarkdownFiles(folder) {
+            const response = await fetch(`${baseUrl}${folder}`);
+            const files = await response.json();
+            function shuffleArray(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(0 * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+                return array;
+            }
+
+            const randomFiles = shuffleArray(files);
+            const maxVisibleItems = folder === 'posts' ? 6 : folder === 'projects' ? 6 : folder === 'experience' ? 3 : Infinity;
+            let itemCount = 0;
+
+            for (const file of randomFiles) {
+                if (file.name.endsWith('.md')) {
+                    const fileRes = await fetch(file.download_url);
+                    const mdContent = await fileRes.text();
+                    const mdWithLineBreaks = mdContent.replace(/\n/g, '  \n');
+                    const htmlContent = converter.makeHtml(mdWithLineBreaks);
+
+                    const title = mdContent.split('\n')[0].replace(/^#+\s*/, '');
+                    const contentWithoutTitle = mdContent.replace(/^.+\n/, '');
+                    const htmlContentWithoutTitle = converter.makeHtml(contentWithoutTitle);
+
+                    const fileCard = `
+            <div class="markdown-container bg-white p-4 rounded shadow-md transition-colors duration-200 hover:bg-gray-100 w-200 h-200 overflow-auto flex-none mx-2 my-2">
+              <h2 class="text-xl font-semibold mb-2">${title}</h2>
+              <div>${htmlContentWithoutTitle}</div>
+            </div>
+          `;
+
+                    // Add images for the "projects" folder only
+                    const projectCard = `
+  <div class="markdown-container bg-white p-4 rounded shadow-md transition-colors duration-200 hover:bg-gray-100 w-200 h-auto overflow-auto flex-none mx-2 my-2">
+    <div class="title-container">
+      <h2 class="text-xl font-semibold">${title}</h2>
+    </div>
+    <img src="assets/projects/${file.name.replace('.md', '.png')}" alt="${title}" class="project-image" onerror="console.log('Image not found: assets/${file.name.replace('.md', '.png')}')" />
+    <div class="mt-4">${htmlContentWithoutTitle}</div>
+  </div>
+`;
+
+
+                    if (itemCount < maxVisibleItems) {
+                        if (folder === 'posts') {
+                            postsList.innerHTML += fileCard;
+                        } else if (folder === 'projects') {
+                            projectsList.innerHTML += projectCard; // Show image in projects
+                        } else if (folder === 'experience') {
+                            experienceList.innerHTML += fileCard; // Show standard card in experience
+                        } else if (folder === 'linkedin') {
+                            document.getElementById('listening-list').innerHTML += fileCard;
+                        }
+                    } else {
+                        if (folder !== 'listening') {
+                            const hiddenCard = `<div class='hidden unhidden'>${fileCard}</div>`;
+                            if (folder === 'posts') {
+                                postsList.innerHTML += hiddenCard;
+                            } else if (folder === 'projects') {
+                                projectsList.innerHTML += hiddenCard;
+                            } else if (folder === 'experience') {
+                                experienceList.innerHTML += hiddenCard;
+                            }
+                        }
+                    }
+                    itemCount++;
+                }
+            }
+
+            if (folder !== 'listening' && itemCount > maxVisibleItems) {
+                const container = folder === 'posts' ? postsList : folder === 'projects' ? projectsList : experienceList;
+                createShowMoreButton(container);
+            }
+        }
+
+        const createShowMoreButton = (container) => {
+            const button = document.createElement('button');
+            button.innerHTML = '➕ Show More';
+            button.classList.add('show-more');
+            button.style.color = 'gray'; // Set the text color to gray
+            button.style.marginTop = '10px'; // Add some margin on top
+            container.after(button);
+
+            button.addEventListener('click', () => {
+                const hiddenItems = container.querySelectorAll('.hidden');
+                hiddenItems.forEach(item => item.classList.remove('hidden'));
+                button.remove();
+                createShowLessButton(container);
+            });
+        };
+
+        const createShowLessButton = (container) => {
+            const button = document.createElement('button');
+            button.innerHTML = '− Show Less';
+            button.classList.add('show-less');
+            button.style.color = 'gray'; // Set the text color to gray
+            button.style.marginTop = '10px'; // Add some margin on top
+            container.after(button);
+
+            button.addEventListener('click', () => {
+                const hiddenItems = container.querySelectorAll('.unhidden');
+                hiddenItems.forEach(item => item.classList.add('hidden'));
+                button.remove();
+                createShowMoreButton(container);
+            });
+        };
+
+        folders.forEach(folder => {
+            fetchMarkdownFiles(folder);
+        });
+    </script>
+
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: '#888888'
+                },
+                shape: {
+                    type: 'circle',
+                    stroke: {
+                        width: 0,
+                        color: '#000000'
+                    },
+                    polygon: {
+                        nb_sides: 5
+                    }
+                },
+                opacity: {
+                    value: 0.5,
+                    random: true,
+                    anim: {
+                        enable: false,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: false,
+                        speed: 40,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#888888',
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 6,
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false,
+                    attract: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: 'repulse'
+                    },
+                    onclick: {
+                        enable: false
+                    },
+                    resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 400,
+                        line_linked: {
+                            opacity: 1
+                        }
+                    },
+                    bubble: {
+                        distance: 400,
+                        size: 40,
+                        duration: 2,
+                        opacity: 8,
+                        speed: 3
+                    },
+                    repulse: {
+                        distance: 200,
+                        duration: 0.4
+                    },
+                    push: {
+                        particles_nb: 4
+                    },
+                    remove: {
+                        particles_nb: 2
+                    }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+    <script src="https://unpkg.com/elevator.js"></script>
+    <script>
+        const elevator = new Elevator({
+            mainAudio: "https://raw.githubusercontent.com/tholman/elevator.js/master/demo/music/elevator.mp3",
+            endAudio: "https://raw.githubusercontent.com/tholman/elevator.js/master/demo/music/ding.mp3",
+            duration: 5000,
+        });
+
+        const footer = document.createElement("footer");
+        footer.className = "mt-8 mb-4";
+        const footerContent = document.createElement("div");
+        footerContent.className = "flex items-center justify-between";
+        footer.appendChild(footerContent);
+
+        const copyright = document.createElement("div");
+        copyright.className = "hidden md:flex";
+        copyright.innerHTML = '&nbsp;&nbsp;&copy; ' + (new Date().getFullYear()) + ' Simardeep Singh Mehta ';
+        footerContent.appendChild(copyright);
+
+        const elevatorBtnDiv = document.createElement("div");
+        elevatorBtnDiv.innerHTML = 'You need an elevator ride?&nbsp;&nbsp;<i class="fas fa-elevator"></i>&nbsp;&nbsp;';
+        elevatorBtnDiv.className = "text-center flex justify-center items-center cursor-pointer mt-4";
+        elevatorBtnDiv.onclick = () => {
+            elevator.elevate();
+        };
+
+        footerContent.appendChild(elevatorBtnDiv);
+        document.body.appendChild(footer);
+    </script>
+    <style>
+        @keyframes pulsate {
+            0% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+
+            50% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+        }
+
+        #scroll-down-btn i {
+            animation: pulsate 1.5s linear infinite;
+        }
+    </style>
+    <button id="scroll-down-btn"
+        class="fixed bottom-4 left-1/2 text-black p-2 rounded shadow-md opacity-80 transition-colors duration-200 ease-in-out dark:bg-gray-800 dark:text-white">
+        <i class="fa-solid fa-v"></i>
+    </button>
+    <script>
+        const scrollDownBtn = document.getElementById('scroll-down-btn');
+        const headerContainer = document.getElementById('header-container');
+
+        const toggleScrollButtonVisibility = () => {
+            if (window.pageYOffset === 0) {
+                scrollDownBtn.style.display = 'flex';
+            } else {
+                scrollDownBtn.style.display = 'none';
+            }
+        }
+
+        scrollDownBtn.addEventListener('click', () => {
+            const yOffset = headerContainer.getBoundingClientRect().bottom + window.pageYOffset;
+            window.scrollTo({ top: yOffset, behavior: 'smooth' });
+        });
+
+        window.addEventListener('scroll', toggleScrollButtonVisibility);
+        toggleScrollButtonVisibility();
+    </script>
+</body>
+
+</html>
